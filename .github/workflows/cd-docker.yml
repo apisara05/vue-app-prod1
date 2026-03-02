@@ -47,4 +47,4 @@ jobs:
             docker login -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }} ghcr.io
             docker rm -f vue-app-prod || true
             docker pull ghcr.io/${{ env.IMAGE_NAME }}:${{ github.ref_name }}
-            docker run --restart=always -d --name vue-app-prod -p 1010:80 ghcr.io/${{ env.IMAGE_NAME }}:${{ github.ref_name }}
+            docker run --restart=always -d --name vue-app-prod -p 9913:80 ghcr.io/${{ env.IMAGE_NAME }}:${{ github.ref_name }}
