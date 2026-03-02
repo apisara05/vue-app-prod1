@@ -40,7 +40,7 @@ jobs:
         with:
           host: '167.172.92.228'
           username: 'root'
-          password: ${{ secrets.MEW1_PASSWORD}}
+          password: ${{ secrets.MEW_SCRET}
           port: '22'
           script: |
             docker logout ghcr.io
